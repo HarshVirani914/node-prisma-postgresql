@@ -1,5 +1,9 @@
 import app from './server';
+import * as dotenv from 'dotenv';
+import config from './config';
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+dotenv.config();
+
+app.listen(config.port, () => {
+  console.log(`Server listening on port ${config.port}`);
 });
